@@ -17,6 +17,20 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "paths": {}
+    "allowJs": true,
+    "paths": {
+      "@app/db": [
+        "libs/db/src"
+      ],
+      "@app/db/*": [
+        "libs/db/src/*"
+      ],
+      "@app/share_lib": [
+        "libs/share_lib/src"
+      ],
+      "@app/share_lib/*": [
+        "libs/share_lib/src/*"
+      ]
+    }
   }
 }

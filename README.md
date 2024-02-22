@@ -1,73 +1,71 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<a href="https://community.sap.com/topics/cloud-sdk"><img src="https://help.sap.com/doc/2324e9c3b28748a4ae2ad08166d77675/1.0/en-US/logo-with-js.svg" alt="SAP Cloud SDK for JavaScript Logo" height="122.92" width="226.773"/></a>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Welcome to Your Application!
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This is your **SAP Cloud Platform Cloud Foundry** application powered by the [SAP Cloud SDK for JavaScript](https://community.sap.com/topics/cloud-sdk) and [NestJS](https://nestjs.com/).
 
-## Description
+## Getting started
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
+Everything is ready to go. 
 
 ```bash
-$ yarn install
+# Run the application locally
+$ npm run start:dev
+
+# Open the application in your default browser
+$ open http://localhost:3000/
 ```
 
-## Running the app
+If you have the [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html) and are [logged in](https://docs.cloudfoundry.org/cf-cli/getting-started.html#login), you can deploy the application without any changes to the application.
 
 ```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+# Deploy your application to SAP Cloud Platform Cloud Foundry
+$ cf push
 ```
 
-## Test
+## Testing
+
+The project comes with unit and end-to-end tests. 
+Unit tests are located in the `src/` folder next to the modules and controllers, while end-to-end tests are in the `test/` folder.
 
 ```bash
-# unit tests
-$ yarn run test
+# Run unit tests
+$ npm run test
 
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+# Run e2e tests
+$ npm run test:e2e
 ```
+
+## Continuous Integration
+
+This project is preconfigured to run with the [SAP Cloud SDK Pipeline](https://github.com/SAP/cloud-s4-sdk-pipeline).
+To get the installer follow the short [guide](https://github.com/SAP/cloud-s4-sdk-pipeline#download-and-installation).
+
+```bash
+# If you have the SAP Cloud SDK CLI installed, it can download the install script for you
+sap-cloud-sdk add-cx-server
+
+# Execute the script to start the Jenkins server
+$ ./cx-server start
+```
+
+Point the new Jenkins to your repository and it will automatically run the pipeline. 
+If the pipeline should deploy your application as well, you need to modify the `.pipeline/config.yml`.
+
+## NestJS
+
+NestJS is a progressive [Node.js](http://nodejs.org) framework for building efficient and scalable server-side applications, heavily inspired by [Angular](https://angular.io). 
+
+The [Nest CLI](https://docs.nestjs.com/cli/usages) is a powerful tool and can help you create new controllers, modules and interfaces.
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+If you need support with the SAP Cloud SDK, the SAP Cloud SDK CLI or this project scaffold, feel free to open an issue on [GitHub](https://github.com/SAP/cloud-sdk-cli) or ask a question on [stackoverflow with tag [sap-cloud-sdk]](https://stackoverflow.com/questions/tagged/sap-cloud-sdk).
 
-## Stay in touch
+## License and Notice
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+The SAP Cloud SDK CLI is licensed under the [Apache Software License, v. 2](https://github.com/SAP/cloud-sdk-cli/blob/master/LICENSE). 
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+The SAP Cloud SDK is in no way affiliated with or endorsed by Nest and its maintainers.
+While Nest is our recommendation, the SAP Cloud SDK can be used with any framework, so you are free to choose what you are comfortable with.
